@@ -1,5 +1,6 @@
 const path = require("path");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -7,8 +8,15 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+      title: "Nexfly",
+    }),
+  ],
   devServer: {
-    static: path.resolve(__dirname, "dist"),
+    static: path.resolve(__dirname, "src"),
     port: 8080,
     hot: true,
   },
@@ -36,48 +44,6 @@ module.exports = {
           },
         ],
       },
-    ],
-  },
-  optimization: {
-    minimizer: [
-      "...",
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            // Lossless optimization with custom option
-            // Feel free to experiment with options for better result for you
-            plugins: [
-              ["gifsicle", { interlaced: true }],
-              ["jpegtran", { progressive: true }],
-              ["optipng", { optimizationLevel: 5 }],
-              // Svgo configuration here https://github.com/svg/svgo#configuration
-              [
-                "svgo",
-                {
-                  plugins: [
-                    {
-                      name: "preset-default",
-                      params: {
-                        overrides: {
-                          removeViewBox: false,
-                          addAttributesToSVGElement: {
-                            params: {
-                              attributes: [
-                                { xmlns: "http://www.w3.org/2000/svg" },
-                              ],
-                            },
-                          },
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            ],
-          },
-        },
-      }),
     ],
   },
 };

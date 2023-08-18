@@ -1,6 +1,4 @@
-// @import "../../node_modules/bootstrap/scss/grid";
 @import "~bootstrap/scss/bootstrap";
-
 @font-face {
   font-family: "Albert Sans";
   src: url("./../assets/fonts/AlbertSans-Regular.eot");
@@ -20,6 +18,11 @@ $bg-beige: #fdf9ef;
 $bg-beige-v2: #f6e7c3;
 $bg-avocado: #d0e0af;
 $tx-brown: #301b0a;
+
+body {
+  margin: 0;
+}
+// @import "../../node_modules/bootstrap/scss/grid";
 
 @mixin input-animation() {
   width: 45px;
@@ -52,6 +55,17 @@ $tx-brown: #301b0a;
   }
 }
 
+@mixin label-base() {
+  color: var(--primary-black, $tx-brown);
+  font-weight: 500;
+}
+
+* {
+  color: $tx-brown;
+  @include label-base();
+  box-sizing: border-box;
+}
+
 @mixin base-font() {
   font-family: Albert Sans;
   font-size: 16px;
@@ -59,14 +73,10 @@ $tx-brown: #301b0a;
   line-height: 160%;
 }
 
-@mixin label-base() {
-  color: var(--primary-black, $tx-brown);
-  font-weight: 500;
-}
-span,
-* {
-  color: $tx-brown;
-  @include label-base();
+@mixin align-right() {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .wrapper {
@@ -75,25 +85,47 @@ span,
 
 header {
   padding: 48px 0;
-  input {
-    @include input-animation();
-    border: 0;
-    .cool-link {
-      display: inline-block;
-      color: #000;
-      text-decoration: none;
+  .wrapper-search-menu-logging {
+    > button,
+    > form {
+      margin-left: 10px;
     }
-  }
-  button {
-    border-radius: 16px;
-    border: 2px solid var(--primary-black, $tx-brown);
+    input {
+      @include input-animation();
+      border: 0;
+      .cool-link {
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+      }
+    }
+    button {
+      border-radius: 16px;
+      border: 2px solid var(--primary-black, $tx-brown);
+      box-sizing: border-box;
+      padding: 10px 32px;
+      align-items: center;
+      background-color: transparent;
+      span {
+        padding-right: 5px;
+      }
+    }
+    @include align-right();
     display: flex;
-    box-sizing: border-box;
-    padding: 10px 32px;
-    align-items: center;
-    background-color: transparent;
-    span {
-      padding-right: 5px;
+    flex-direction: row;
+    justify-content: flex-end;
+    #menu {
+      background-color: $tx-brown;
+      box-sizing: border-box;
+      padding: 10px 32px;
+      img,
+      svg {
+        height: 25px !important;
+      }
+      span {
+        color: $bg-beige;
+        padding-right: 5px;
+      }
     }
   }
 }
