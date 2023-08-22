@@ -1,61 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Test</title>
-  </head>
-  <body>
-    <div class="container py-4 pt-0 px-5 mx-auto wrapper">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col col-lg-6 px-0">
-              <img
-                src="./assets/logo.svg"
-                class="img-fluid ml-0"
-                alt="Responsive image" />
-            </div>
-            <div
-              class="col col-lg-6 pr-0 wrapper-search-menu-logging pr-0 md-0">
-              <form class="d-flex flex-row-reverse">
-                <div class="p-2">
-                  <input
-                    type="search"
-                    class=""
-                    placeholder="Søk"
-                    aria-label="Search"
-                    aria-describedby="search-addon" />
-                  <span class="border-0" id="search-addon">
-                    <img
-                      src="./assets/icons/search.svg"
-                      alt="Responsive image" />
-                  </span>
-                </div>
-              </form>
-              <button type="button">
-                <span>Logg inn</span>
-                <img src="./assets/icons/user.svg" alt="Responsive image" />
-              </button>
-              <button type="button" id="menu" class="mr-0">
-                <span>Meny </span>
-                <img
-                  src="./assets/icons/hamburger.svg"
-                  alt="Responsive image" />
-              </button>
-            </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/styles-min.css" />
+  <title>Test</title>
+</head>
+
+<body>
+  <div class="container py-4 pt-0 px-0 mx-auto wrapper">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-6 px-0">
+            <img src="./assets/logo.svg" class="img-fluid ml-0" alt="Responsive image" />
+          </div>
+          <div class="col col-lg-6 pr-0 wrapper-search-menu-logging pr-0 md-0">
+            <form class="d-flex flex-row-reverse">
+              <div class="p-2">
+                <input type="search" class="" placeholder="Søk" aria-label="Search" aria-describedby="search-addon" />
+                <span class="border-0" id="search-addon">
+                  <img src="./assets/icons/search.svg" alt="Responsive image" />
+                </span>
+              </div>
+            </form>
+            <button type="button">
+              <span>Logg inn</span>
+              <img src="./assets/icons/user.svg" alt="Responsive image" />
+            </button>
+            <button type="button" id="menu" class="mr-0">
+              <span>Meny </span>
+              <img src="./assets/icons/hamburger.svg" alt="Responsive image" />
+            </button>
           </div>
         </div>
-      </header>
-      <div class="jumbotron text-white bg-dark">
-        <img
-          src="./assets/image4.png"
-          class="img-fluid"
-          alt="Responsive image" />
       </div>
-      <script src="./main.js"></script>
-      <h1>Hello, Bootstrap and Webpack!</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
-  </body>
+    </header>
+    <section class="jumbotron text-white bg-dark pr-0 pl-0 pt-0 pb-0" id="banner">
+      <img src="./assets/image4.png" class="img-fluid" alt="Responsive image" />
+      <div class="container text-left slogan">
+        <div class="row align-items-center">
+          <div class="col">
+            <h1>Allskog er et samvirke av og for skogeiere</h1>
+          </div>
+        </div>
+        <div class="row align-items-left">
+          <div class="col">
+            <p>
+              Vi er en robust organisasjon med høy kompetanse innen alle
+              skogtjenester du trenger som skogeier.
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-left wrapper-link-list">
+          <div class="col list-links">
+            <ul class="icon-list">
+              <li><img src="./assets/icons/arrow-internal-link.svg" /></im> Skogtjenester</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Veiledning</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Bli andelseier</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Finn skogbruksleder</li>
+            </ul>
+            <ul class="icon-list">
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Om Allskog</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Bærekraft og miljø</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Arrangementer</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Aktuelt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers" class="container align-items-left">
+      <div class="row">
+        <div class="col">
+          <span>70</span>
+          <span>skogeierlag</span>
+        </div>
+        <div class="col">
+          <span>7.600</span>
+          <span>andelseiere</span>
+        </div>
+        <div class="col">
+          <span>1 million</span>
+          <span>m3 tømmer per år</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="container align-items-left">
+      <div class="row">
+        <div class="col">
+          <h4>Finn din skogbruksleder</h4>
+          <span>Søk etter postnummer, region eller fylke</span>
+          <div class="input-with-button">
+            <input type="text" class="form-control" placeholder="Skriv søkeord">
+            <button class="btn btn-primary">Søk</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="photo" class="container align-items-left">
+      <div class="row">
+        <div class="col d-flex flex-column">
+          <h2>Lyst til å bli andelseier i Allskog?</h2>
+          <span>Hvis du eier skog, kan du melde deg inn i Allskog. Da blir du medeier av skogfellesskapet i
+            Norge.</span>
+          <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+        </div>
+      </div>
+    </section>
+    <section id="call-to-action" class="container align-items-left">
+      <div class="row">
+        <div class="col d-flex flex-column">
+          <h4>Skal du plante ny skog?</h4>
+          <p>Etter hogst skal det plantes innen tre år. Skal du plante selv denne sesongen, må du bestille planter innen
+            15. april.</p>
+          <button class="svg-button">
+            <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+          </button>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex flex-column">
+          <h4>Skal du plante ny skog?</h4>
+          <p>Etter hogst skal det plantes innen tre år. Skal du plante selv denne sesongen, må du bestille planter innen
+            15. april.</p>
+          <button class="svg-button">
+            <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="photo" class="container align-items-left">
+      <div class="row">
+        <div class="col d-flex flex-column">
+          <h2>Lyst til å bli andelseier i Allskog?</h2>
+          <span>Hvis du eier skog, kan du melde deg inn i Allskog. Da blir du medeier av skogfellesskapet i
+            Norge.</span>
+          <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="container align-items-left">
+      <div class="row">
+        <div class="col d-flex flex-column">
+          <h2>Nyheter</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul role="list" class="d-flex flex-row" aria-label="List of latest blog posts">
+            <li role="listitem">
+              <article>
+                <img class="card-img-top" src="./assets/blog/1.png" alt="Card image cap">
+                <time datetime="2023-04-17" aria-label="Published on April 17, 2023">17. APRIL 2023</time>
+                <h5><a href="post1.html">Går med rekordoverskudd: – Skogeiere har vært lojale til samvirket1</a></h5>
+                <p>Allskog legger bak seg et av mest innbringende år noensinne som konsern. For femte år
+                  på rad kan 7 500 skogeiere nord
+                  for Stad og Dovre få utbetalt utbytte fra samvirket.</p>
+              </article>
+            </li>
+            <li role="listitem">
+              <article>
+                <img class="card-img-top" src="./assets/blog/1.png" alt="Card image cap">
+                <time datetime="2023-04-17" aria-label="Published on April 17, 2023">17. APRIL 2023</time>
+                <h5><a href="post1.html">Går med rekordoverskudd: – Skogeiere har vært lojale til samvirket1</a></h5>
+                <p>Allskog legger bak seg et av mest innbringende år noensinne som konsern. For femte år
+                  på rad kan 7 500 skogeiere nord
+                  for Stad og Dovre få utbetalt utbytte fra samvirket.</p>
+              </article>
+            </li>
+            <li role="listitem">
+              <article>
+                <img class="card-img-top" src="./assets/blog/1.png" alt="Card image cap">
+                <time datetime="2023-04-17" aria-label="Published on April 17, 2023">17. APRIL 2023</time>
+                <h5><a href="post1.html">Går med rekordoverskudd: – Skogeiere har vært lojale til samvirket1</a></h5>
+                <p>Allskog legger bak seg et av mest innbringende år noensinne som konsern. For femte år
+                  på rad kan 7 500 skogeiere nord
+                  for Stad og Dovre få utbetalt utbytte fra samvirket.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+    <section id="events">
+
+    </section>
+    <script src="./main.js"></script>
+  </div>
+</body>
+
 </html>

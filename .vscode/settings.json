@@ -1,0 +1,30 @@
+{
+  "liveSassCompile.settings.compileOnWatch": false,
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "liveSassCompile.settings.useNewCompiler": true,
+  "liveSassCompile.settings.showOutputWindowOn": "Warning",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null,
+      "savePathReplacementPairs": null
+    },
+    {
+      "format": "compressed",
+      "extensionName": "-min.css",
+      "savePath": "./src/styles/",
+      "savePathReplacementPairs": null,
+      "generateMap": true
+    }
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "/**/node_modules/**",
+    "/.vscode/**",
+    "/Exclude-Me/**",
+    "/**/exclude-me.scss"
+  ],
+  "liveSassCompile.settings.partialslist": ["/Styles/Partials/*"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.language": "en,nb"
+}
