@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/styles-min.css" />
+  <title>Test</title>
+</head>
+
+<body>
+  <nav id="overlay">
+    <!-- <img src="images/close-button.svg" alt="menu" class="close-button" id="close-menu"> -->
+    <button id="close-menu" class="navbar-brand close-button">
+      <span>Lukk </span>
+      <img src="./assets/icons/close.svg" alt="Close button" />
+    </button>
+    <ul>
+      <li class="item">
+        <a href="#">Skogtjenester</a>
+        <ul>
+          <li>
+            Skogbruksplanlegging
+          </li>
+          <li>
+            Skogsdrift, hogst og
+            tømmersalg </li>
+          <li>
+            Hjelp til tømmeroppgjør
+          </li>
+          <li>
+            Skogkultur, planting og pleie </li>
+          <li>
+            Frivillig vern av skog</li>
+          <li>
+            Reguleringsplan for areal</li>
+        </ul>
+      </li>
+
+      <li class="item">
+        <a href="#">Bli andelseier</a>
+        <ul>
+          <li>
+            Skogeierlag
+          </li>
+          <li>
+            Skogforsikring </li>
+          <li>
+            Hjelp til tømmeroppgjør
+          </li>
+          <li>
+            Tømmertransport </li>
+          <li>
+            Kartlegging av eiendom</li>
+
+        </ul>
+      </li>
+      <li class="item">
+        <a href="#">Bærekraft og miljø</a>
+        <ul>
+          <li>
+            Sertifisering av tømmer
+          </li>
+          <li>
+            Miljøkrav </li>
+          <li>
+            Biologisk mangfold </li>
+          <li>
+            Tømmertransport </li>
+          <li>
+            Skog og klima</li>
+
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+  <div class="container py-4 pt-0 px-0 mx-auto wrapper">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-6 px-0">
+            <img src="./assets/logo.svg" class="img-fluid ml-0" alt="Responsive image" />
+          </div>
+          <div class="col col-lg-6 pr-0 wrapper-search-menu-logging pr-0 md-0">
+            <form class="d-flex flex-row-reverse">
+              <div class="p-2">
+                <input type="search" class="" placeholder="Søk" aria-label="Search" aria-describedby="search-addon" />
+                <span class="border-0" id="search-addon">
+                  <img src="./assets/icons/search.svg" alt="Responsive image" />
+                </span>
+              </div>
+            </form>
+            <button type="button">
+              <span>Logg inn</span>
+              <img src="./assets/icons/user.svg" alt="Responsive image" />
+            </button>
+            <button type="button" id="open-menu" class="mr-0 navbar-brand">
+              <span>Meny </span>
+              <img src="./assets/icons/hamburger.svg" alt="Responsive image" />
+            </button>
+
+            <div class="hero-section">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="jumbotron text-white bg-dark pr-0 pl-0 pt-0 pb-0" id="banner">
+      <img src="./assets/image4.png" class="img-fluid" alt="Responsive image" />
+      <div class="container text-left slogan">
+        <div class="row align-items-center">
+          <div class="col">
+            <h1>Allskog er et samvirke av og for skogeiere</h1>
+          </div>
+        </div>
+        <div class="row align-items-left">
+          <div class="col">
+            <p>
+              Vi er en robust organisasjon med høy kompetanse innen alle
+              skogtjenester du trenger som skogeier.
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-left wrapper-link-list">
+          <div class="list-links">
+            <ul class="icon-list">
+              <li><img src="./assets/icons/arrow-internal-link.svg" /></im> Skogtjenester</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Veiledning</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Bli andelseier</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Finn skogbruksleder</li>
+            </ul>
+            <ul class="icon-list">
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Om Allskog</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Bærekraft og miljø</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Arrangementer</li>
+              <li><img src="./assets/icons/arrow-internal-link.svg" /> Aktuelt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers" class="align-items-left d-flex flex-row">
+
+      <div class="col d-flex flex-column">
+        <span class="number">70</span>
+        <span aria-label="Description">skogeierlag</span>
+      </div>
+      <div class="col d-flex flex-column">
+        <span class="number">7.600</span>
+        <span aria-label="Description">andelseiere</span>
+      </div>
+      <div class="col d-flex flex-column">
+        <span class="number">1 million</span>
+        <span aria-label="Description">m3 tømmer per år</span>
+      </div>
+
+    </section>
+
+    <section id="newsletter" class="align-items-left ">
+      <div class="row">
+        <div class="col">
+          <h4>Finn din skogbruksleder</h4>
+          <p class="sub-title">Søk etter postnummer, region eller fylke</p>
+          <div class="input-with-button">
+            <input type="text" class="form-control" placeholder="Skriv søkeord">
+            <button class="btn btn-primary d-flex flex-row"><span>Søk</span> <svg width="23" height="23"
+                viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8926 16.8574L21.8926 21.8574" stroke="#FDF9EF" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M1.89258 10.4289C1.89258 15.1627 5.73014 19.0003 10.464 19.0003C12.835 19.0003 14.9813 18.0376 16.533 16.4817C18.0794 14.9313 19.0354 12.7917 19.0354 10.4289C19.0354 5.69498 15.1979 1.85742 10.464 1.85742C5.73014 1.85742 1.89258 5.69498 1.89258 10.4289Z"
+                  stroke="#FDF9EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="photo" class="align-items-left d-flex flex-row-reverse">
+
+      <div class="question d-flex flex-column " aria-label="Lyst til å bli andelseier i Allskog?"
+        class="col d-flex flex-column data pb-0 py-0 pt-0 px-0">
+        <h2>Lyst til å bli andelseier <br />Allskog?</h2>
+        <span>Hvis du eier skog, kan du melde deg inn i<br /> Allskog. Da blir du medeier av skogfellesskapet i
+          Norge.</span>
+        <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+      </div>
+
+    </section>
+    <section class="events" aria-label="List of important dates">
+
+      <div class="row event-detail-wrapper">
+        <div class="col event-item pl-0">
+          <div class="d-flex flex-row event-detail pr-0">
+            <div class="d-flex flex-column" aria-label="Event date">
+              <span class="event-name" arial-label="Event name">Skal du plante ny skog?<br /> sagbruk i
+                Vefsn</span>
+            </div>
+            <div class="d-flex flex-column" aria-label="Event description" class="event-description">
+              <h4 class="event-title">Etter hogst skal det plantes innen tre år. Skal du<br />plante selv denne
+                sesongen, må
+                du<br /> bestille planter innen 15. april.</h4>
+            </div>
+            <button class="d-flex flex-column" aria-label="More information about the event">
+              <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="row event-detail-wrapper">
+        <div class="col event-item pl-0">
+          <div class="d-flex flex-row event-detail">
+            <div class="d-flex flex-column" aria-label="Event date">
+              <span class="event-name" arial-label="Event name">Elgbeitetaksering i Hattfjelldal,<br /> 24. og 25. mai
+                2023</span>
+            </div>
+            <div class="d-flex flex-column" aria-label="Event description" class="event-description">
+              <h4 class="event-title">Vurderer du å ta ut tømmer fra skogen din? Ta<br /> gjerne en prat med en av våre
+                dyktige<br />skogbruksledere. Fra oss i Allskog
+                får du solid<br />veiledning, basert på skogfaglig erfaring og<br />kunnskap.</h4>
+            </div>
+            <button class="d-flex flex-column" aria-label="More information about the event">
+              <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="">
+
+      <div class="d-flex flex-column wrapper-title">
+        <h2>Nyheter</h2>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <ul role="list" class="d-flex flex-row" aria-label="List of latest blog posts">
+            <li role="listitem">
+              <article>
+                <img class="card-img-top" src="./assets/blog/1.png" alt="Card image cap">
+                <time datetime="2023-04-17" aria-label="Published on April 17, 2023">17. APRIL 2023</time>
+                <h5><a href="post1.html">Går med rekordoverskudd: – Skogeiere har vært lojale til samvirket1</a></h5>
+                <p>Allskog legger bak seg et av mest innbringende år noensinne som konsern. For femte år
+                  på rad kan 7 500 skogeiere nord
+                  for Stad og Dovre få utbetalt utbytte fra samvirket.</p>
+              </article>
+            </li>
+            <li role="listitem">
+              <article>
+                <img class="card-img-top" src="./assets/blog/1.png" alt="Card image cap">
+                <time datetime="2023-04-17" aria-label="Published on April 17, 2023">17. APRIL 2023</time>
+                <h5><a href="post1.html">Går med rekordoverskudd: – Skogeiere har vært lojale til samvirket1</a></h5>
+                <p>Allskog legger bak seg et av mest innbringende år noensinne som konsern. For femte år
+                  på rad kan 7 500 skogeiere nord
+                  for Stad og Dovre få utbetalt utbytte fra samvirket.</p>
+              </article>
+            </li>
+            <li role="listitem">
+              <article>
+                <img class="card-img-top" src="./assets/blog/1.png" alt="Card image cap">
+                <time datetime="2023-04-17" aria-label="Published on April 17, 2023">17. APRIL 2023</time>
+                <h5><a href="post1.html">Går med rekordoverskudd: – Skogeiere har vært lojale til samvirket1</a></h5>
+                <p>Allskog legger bak seg et av mest innbringende år noensinne som konsern. For femte år
+                  på rad kan 7 500 skogeiere nord
+                  for Stad og Dovre få utbetalt utbytte fra samvirket.</p>
+              </article>
+            </li>
+          </ul>
+
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-outline-dark">Se alle nyheter</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <section class="events" aria-label="List of important dates">
+      <div class="row">
+        <div class="col">
+          <h2>Kommende arrangementer</h2>
+        </div>
+      </div>
+      <div class="row event-detail-wrapper">
+        <div class="col event-item pl-0">
+          <div class="d-flex flex-row event-detail pr-0">
+            <div class="d-flex flex-column" aria-label="Event date">
+              <time class="event-date" datetime>9.mai</time>
+              <span class="event-name" arial-label="Event name">Temakveld: Etablering av nytt<br /> sagbruk i
+                Vefsn</span>
+            </div>
+            <div class="d-flex flex-column" aria-label="Event description" class="event-description">
+              <h4 class="event-title">Vefsn skogeierlag inviterer til temakveld,<br />etablering av nytt sagbruk i
+                Vefsn.</h4>
+              <div class="d-flex flex-row">
+                <address class="address">
+                  <span>Mosjøen videregående skole avd. Marka<br />(Landbruksskolen).</span>
+                </address>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="event-date">9.mai</span>
+              </div>
+              <div class="tim">
+                <time>Kl. 19.00 - 21.00.</time>
+              </div>
+
+            </div>
+            <button class="d-flex flex-column" aria-label="More information about the event">
+              <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="row event-detail-wrapper">
+        <div class="col event-item pl-0">
+          <div class="d-flex flex-row event-detail">
+            <div class="d-flex flex-column" aria-label="Event date">
+              <time class="event-date" datetime>25. -25.mai</time>
+              <span class="event-name" arial-label="Event name">Elgbeitetaksering i Hattfjelldal,<br /> 24. og 25. mai
+                2023</span>
+            </div>
+            <div class="d-flex flex-column" aria-label="Event description" class="event-description">
+              <h4 class="event-title">Kurset bygger på «Veileder og standard for<br />taksering av elgbeite i skog» –
+                utviklet av Skogkurs.</h4>
+              <div class="d-flex flex-row">
+                <address class="address">
+                  <span>Fjellfolkets Hus, Adr. Hattfjelldalsvollen 1, <br />Hattfjelldal.</span>
+                </address>
+              </div>
+              <div class="d-flex flex-row">
+                <span class="event-date">Onsdag 24. mai og torsdag 25. mai</span>
+              </div>
+              <div class="tim">
+                <time>Kl. 09.00-15.00 begge dager.</time>
+              </div>
+
+            </div>
+            <button class="d-flex flex-column" aria-label="More information about the event">
+              <img class="ico" src="./assets/icons/arrow-internal-link_size-2.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-outline-dark">Se alle arrangementer</button>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <img src="./assets/logo-footer.svg" class="img-fluid ml-0 logo" alt="Responsive image" />
+      <div class="row contact-information" role="region" aria-label="Contact Information">
+        <div class="col">
+          <address>
+            <strong>Adresse</strong><br>
+            Ingvald Ystgaards vei 13A,<br>
+            7047 Trondheim<br>
+          </address>
+        </div>
+        <div class="col">
+          <address>
+            <strong>Kontakt</strong><br>
+            Telefon: <a href="tel:+73500123"><span aria-label="Phone Number:">73 500 123</span></a><br>
+            7047 Trondheim<br>
+            <a href="mailto:firmapost@allskog.no" aria-label="Email: firmapost@allskog.no">firmapost@allskog.no</a><br>
+            <span>Veibeskrivelse</span>
+          </address>
+        </div>
+        <div class="col">
+          <div role="region" aria-label="Social Media Contact">
+            <strong>Følg oss</strong>
+            <ul role="list" class="social-media-links">
+              <li role="listitem">
+                <a href="https://www.facebook.com/example" aria-label="Facebook Profile">
+                  <img src="./assets/icons/facebook.png" alt="Facebook"> Facebook
+                </a>
+              </li>
+              <li role="listitem">
+                <a href="https://twitter.com/example" aria-label="Twitter Profile">
+                  <img src="./assets/icons/youtube_.png" alt="Twitter"> Youtube
+                </a>
+              </li>
+
+            </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./assets/copy-right.svg" alt="Copyright" />
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </div>
+</body>
+
+</html>
