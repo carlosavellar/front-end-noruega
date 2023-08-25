@@ -20,13 +20,8 @@ $bg-avocado: #d0e0af;
 $tx-brown: #301b0a;
 
 $ico-size: 48px;
-
-body {
-  margin: 0;
-  background-color: $bg-beige;
-  position: static;
-}
-// @import "../../node_modules/bootstrap/scss/grid";
+$base-padding-section: 50px;
+$margin-space: 100px;
 
 @mixin border-style($border-bottom: false) {
   border-top: 2px solid $tx-brown;
@@ -70,12 +65,12 @@ body {
 }
 
 @mixin reset-list-style() {
-  list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
   left: 0;
   right: 0;
+  list-style-type: none;
 }
 
 @mixin label-base() {
@@ -104,7 +99,45 @@ body {
 
 .wrapper {
   background-color: $bg-beige;
+  max-width: 1240px;
 }
+
+body {
+  margin: 0;
+  background-color: $bg-beige;
+  position: static;
+}
+
+footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+section {
+  // padding-top: $base-padding-section;
+  // padding-bottom: $base-padding-section;
+  // &:not(:last-child) {
+  //   padding-bottom: ($base-padding-section * 2);
+  //   padding-top: $base-padding-section;
+  // }
+  // padding-bottom: 10px;
+}
+ul {
+  @include reset-list-style();
+}
+
+span {
+  color: $tx-brown;
+}
+a {
+  color: $tx-brown;
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 0.5rem;
+}
+// @import "../../node_modules/bootstrap/scss/grid";
 
 header {
   padding: 48px 0;
@@ -175,7 +208,7 @@ header {
       line-height: 160%; /* 38.4px */
     }
     .list-links {
-      width: 2202px;
+      width: 806px;
       display: flex;
       flex-direction: row;
       position: absolute;
@@ -201,29 +234,107 @@ header {
 }
 
 #numbers {
-  margin-top: 500px;
+  margin-top: 550px;
+  font-style: normal;
+  font-weight: 500;
+  .number {
+    font-size: 4.225rem;
+    font-style: normal;
+  }
+  [aria-label="Description"] {
+    font-size: 1.25rem;
+  }
+  .col {
+    padding: 48px;
+    background-color: $bg-beige-v2;
+
+    &:not(:last-child) {
+      margin: 0 60px 0 0;
+    }
+  }
 }
 
 #newsletter {
+  margin-top: $margin-space;
   .input-with-button {
     display: flex;
     align-items: center;
     border: 1px solid #ced4da;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.25rem;
+    border-radius: 0;
+    background-color: #fff;
+    border: 2px solid $tx-brown;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    .btn {
+      padding: 0.9375rem 2rem;
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: none;
+      border-top-left-radius: 16px;
+      border-radius: 16px;
+      background-color: $tx-brown;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: #fff;
+      span {
+        color: #fff;
+      }
+      svg {
+        margin-left: 12px;
+      }
+      color: #fff;
+    }
+    .form-control {
+      border: none;
+      font: 1.25rem;
+      color: $tx-brown;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+    }
   }
-  .input-with-button .btn {
-    margin-left: -1px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+
+  margin-bottom: $margin-space;
+  h4 {
+    font-size: 2.375rem;
+  }
+  p {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+  }
+  .sub-title {
+    margin-bottom: 48px;
   }
 }
 
+#newsletter {
+  background-color: $bg-avocado;
+  padding: 100px 217px;
+}
+
 #photo {
+  background: url("./../assets/picture.png") no-repeat;
+
   .ico {
     width: $ico-size;
     height: auto;
   }
+  .question {
+    $padding: 24px;
+    background-color: $bg-beige-v2;
+    padding: 80px 120px;
+    width: 62%;
+    h2,
+    span {
+      padding: 0 0 $padding 0;
+    }
+  }
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 #call-to-action {
@@ -248,17 +359,159 @@ header {
 }
 
 #blog {
+  margin-top: 100px;
+  .wrapper-title {
+    padding-bottom: 36px;
+  }
   ul {
     @include reset-list-style();
+    padding-bottom: 36px;
     li {
+      padding: 36px;
+      background-color: $bg-beige-v2;
+
       &:not(:last-child) {
-        /* Styles for list items except the last one */
-        margin-right: 18px; /* For example, add margin between items */
+        margin-right: 18px;
       }
       &:not(:first-child) {
-        /* Styles for list items except the last one */
-        margin-left: 18px; /* For example, add margin between items */
+        margin-left: 18px;
+      }
+      article {
+        $padding-items: 16px;
+        img {
+          padding-bottom: $padding-items;
+        }
+        time {
+          font-size: 1.25rem;
+          padding-bottom: $padding-items;
+        }
+        h5 {
+          font-size: 1.5rem;
+          padding-bottom: $padding-items;
+        }
+        p {
+          font-size: 1.125rem;
+          padding-bottom: $padding-items;
+        }
       }
     }
+  }
+}
+
+.events {
+  margin-top: 100px;
+  h2 {
+    font-size: 2.375rem;
+  }
+  .event-date {
+    display: inline-block;
+    border-radius: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: $tx-brown;
+    color: #ffffff;
+    width: fit-content;
+  }
+  .event-item {
+    background-color: $bg-avocado;
+    .event-description {
+      span,
+      div {
+        margin-bottom: 20px !important;
+        border: 1px solid red;
+      }
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      align-self: center;
+    }
+    padding-right: 0px;
+  }
+  .icon {
+    width: 24px;
+    height: auto;
+  }
+  span.event-name {
+    padding-top: 22.5px;
+    font-size: 1.5rem;
+  }
+  .event-detail-wrapper {
+    margin: 40px 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .event-detail {
+    position: relative;
+
+    padding: 60px 0 60px 60px;
+    [aria-label="Event date"] {
+      width: 40%;
+    }
+    [aria-label="Event description"] {
+      $padding-event-det: 20px;
+      h4 {
+        padding-bottom: $padding-event-det;
+      }
+      width: 46%;
+      span {
+        width: 100%;
+      }
+      .event-title {
+        font-size: 1.25rem;
+      }
+      div {
+        font-size: 1rem;
+      }
+      .address {
+        background: url("./../assets/icons/pin-point.svg") no-repeat;
+        padding-left: 50px;
+        padding-bottom: $padding-event-det;
+      }
+      .event-date {
+        background: url("./../assets/icons/calendar.svg") no-repeat;
+        padding-left: 50px;
+        color: $tx-brown;
+        padding-bottom: $padding-event-det;
+      }
+      time {
+        background: url("./../assets/icons/clock.svg") no-repeat;
+        padding-left: 50px;
+        padding-bottom: $padding-event-det;
+      }
+    }
+    [aria-label="More information about the event"] {
+      width: 10%;
+      padding: 30px;
+      align-items: end;
+    }
+    // .icon {
+    //   position: absolute;
+    // }
+  }
+}
+
+.events-bottom {
+  margin-top: 50 px;
+}
+
+footer {
+  padding-top: 60px;
+  .logo {
+    width: 88px;
+    height: auto;
+  }
+  .contact-information {
+    padding: 60px 0;
+  }
+  ul.social-media-links {
+    @include reset-list-style();
+  }
+  strong {
+    font-size: 1.375rem;
+  }
+  span {
+    font-size: 1.125rem;
   }
 }

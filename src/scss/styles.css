@@ -9218,12 +9218,6 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-display: swap;
 }
-body {
-  margin: 0;
-  background-color: #fdf9ef;
-  position: static;
-}
-
 * {
   color: #301b0a;
   color: var(--primary-black, #301b0a);
@@ -9233,6 +9227,40 @@ body {
 
 .wrapper {
   background-color: #fdf9ef;
+  max-width: 1240px;
+}
+
+body {
+  margin: 0;
+  background-color: #fdf9ef;
+  position: static;
+}
+
+footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+}
+
+span {
+  color: #301b0a;
+}
+
+a {
+  color: #301b0a;
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 0.5rem;
 }
 
 header {
@@ -9328,7 +9356,7 @@ header .wrapper-search-menu-logging #menu span {
   line-height: 160%; /* 38.4px */
 }
 #banner .slogan .list-links {
-  width: 2202px;
+  width: 806px;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -9338,12 +9366,12 @@ header .wrapper-search-menu-logging #menu span {
   display: box;
 }
 #banner .slogan ul {
-  list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
   left: 0;
   right: 0;
+  list-style-type: none;
 }
 #banner .slogan ul li {
   border-top: 2px solid #301b0a;
@@ -9358,25 +9386,103 @@ header .wrapper-search-menu-logging #menu span {
 }
 
 #numbers {
-  margin-top: 500px;
+  margin-top: 550px;
+  font-style: normal;
+  font-weight: 500;
+}
+#numbers .number {
+  font-size: 4.225rem;
+  font-style: normal;
+}
+#numbers [aria-label=Description] {
+  font-size: 1.25rem;
+}
+#numbers .col {
+  padding: 48px;
+  background-color: #f6e7c3;
+}
+#numbers .col:not(:last-child) {
+  margin: 0 60px 0 0;
 }
 
+#newsletter {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 #newsletter .input-with-button {
   display: flex;
   align-items: center;
   border: 1px solid #ced4da;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0;
+  background-color: #fff;
+  border: 2px solid #301b0a;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 #newsletter .input-with-button .btn {
+  padding: 0.9375rem 2rem;
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border: none;
+  border-top-left-radius: 16px;
+  border-radius: 16px;
+  background-color: #301b0a;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #fff;
+  color: #fff;
+}
+#newsletter .input-with-button .btn span {
+  color: #fff;
+}
+#newsletter .input-with-button .btn svg {
+  margin-left: 12px;
+}
+#newsletter .input-with-button .form-control {
+  border: none;
+  font: 1.25rem;
+  color: #301b0a;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+#newsletter h4 {
+  font-size: 2.375rem;
+}
+#newsletter p {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+}
+#newsletter .sub-title {
+  margin-bottom: 48px;
 }
 
+#newsletter {
+  background-color: #d0e0af;
+  padding: 100px 217px;
+}
+
+#photo {
+  background: url("./../assets/picture.png") no-repeat;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 #photo .ico {
   width: 48px;
   height: auto;
+}
+#photo .question {
+  background-color: #f6e7c3;
+  padding: 80px 120px;
+  width: 62%;
+}
+#photo .question h2,
+#photo .question span {
+  padding: 0 0 24px 0;
 }
 
 #call-to-action .svg-button {
@@ -9396,19 +9502,160 @@ header .wrapper-search-menu-logging #menu span {
   fill: currentColor; /* SVG icon color inherits from button's text color */
 }
 
+#blog {
+  margin-top: 100px;
+}
+#blog .wrapper-title {
+  padding-bottom: 36px;
+}
 #blog ul {
-  list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
   left: 0;
   right: 0;
+  list-style-type: none;
+  padding-bottom: 36px;
+}
+#blog ul li {
+  padding: 36px;
+  background-color: #f6e7c3;
 }
 #blog ul li:not(:last-child) {
-  /* Styles for list items except the last one */
-  margin-right: 18px; /* For example, add margin between items */
+  margin-right: 18px;
 }
 #blog ul li:not(:first-child) {
-  /* Styles for list items except the last one */
-  margin-left: 18px; /* For example, add margin between items */
+  margin-left: 18px;
+}
+#blog ul li article img {
+  padding-bottom: 16px;
+}
+#blog ul li article time {
+  font-size: 1.25rem;
+  padding-bottom: 16px;
+}
+#blog ul li article h5 {
+  font-size: 1.5rem;
+  padding-bottom: 16px;
+}
+#blog ul li article p {
+  font-size: 1.125rem;
+  padding-bottom: 16px;
+}
+
+.events {
+  margin-top: 100px;
+}
+.events h2 {
+  font-size: 2.375rem;
+}
+.events .event-date {
+  display: inline-block;
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #301b0a;
+  color: #ffffff;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.events .event-item {
+  background-color: #d0e0af;
+  padding-right: 0px;
+}
+.events .event-item .event-description span,
+.events .event-item .event-description div {
+  margin-bottom: 20px !important;
+  border: 1px solid red;
+}
+.events .event-item button {
+  border: none;
+  background-color: transparent;
+  align-self: center;
+}
+.events .icon {
+  width: 24px;
+  height: auto;
+}
+.events span.event-name {
+  padding-top: 22.5px;
+  font-size: 1.5rem;
+}
+.events .event-detail-wrapper {
+  margin: 40px 0;
+}
+.events .event-detail-wrapper:first-child {
+  margin-top: 0;
+}
+.events .event-detail {
+  position: relative;
+  padding: 60px 0 60px 60px;
+}
+.events .event-detail [aria-label="Event date"] {
+  width: 40%;
+}
+.events .event-detail [aria-label="Event description"] {
+  width: 46%;
+}
+.events .event-detail [aria-label="Event description"] h4 {
+  padding-bottom: 20px;
+}
+.events .event-detail [aria-label="Event description"] span {
+  width: 100%;
+}
+.events .event-detail [aria-label="Event description"] .event-title {
+  font-size: 1.25rem;
+}
+.events .event-detail [aria-label="Event description"] div {
+  font-size: 1rem;
+}
+.events .event-detail [aria-label="Event description"] .address {
+  background: url("./../assets/icons/pin-point.svg") no-repeat;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+.events .event-detail [aria-label="Event description"] .event-date {
+  background: url("./../assets/icons/calendar.svg") no-repeat;
+  padding-left: 50px;
+  color: #301b0a;
+  padding-bottom: 20px;
+}
+.events .event-detail [aria-label="Event description"] time {
+  background: url("./../assets/icons/clock.svg") no-repeat;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+.events .event-detail [aria-label="More information about the event"] {
+  width: 10%;
+  padding: 30px;
+  align-items: end;
+}
+
+.events-bottom {
+  margin-top: 50 px;
+}
+
+footer {
+  padding-top: 60px;
+}
+footer .logo {
+  width: 88px;
+  height: auto;
+}
+footer .contact-information {
+  padding: 60px 0;
+}
+footer ul.social-media-links {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+}
+footer strong {
+  font-size: 1.375rem;
+}
+footer span {
+  font-size: 1.125rem;
 }/*# sourceMappingURL=styles.css.map */
